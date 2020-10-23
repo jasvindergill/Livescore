@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Livescore.Views.SplashScreen;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Livescore
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new WelcomeScreen();
         }
 
         protected override void OnStart()
