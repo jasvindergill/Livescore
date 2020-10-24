@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Livescore.Models.SocialMediaModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,12 @@ namespace Livescore.Views.LoginScreen
 
         private void OnGoogleButtonClicked(object sender, EventArgs e)
         {
+            this.BindingContext = new GoogleModel();
+        }
 
+        private void OnFacebookButtonClicked(object sender, EventArgs e)
+        {
+            this.BindingContext = new FacebookModel();
         }
     }
 }
