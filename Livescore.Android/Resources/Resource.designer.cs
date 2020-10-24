@@ -8905,100 +8905,106 @@ namespace Livescore.Droid
 			public const int design_snackbar_background = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int googleg_disabled_color_18 = 2131165324;
+			public const int fbIcon = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int googleg_standard_color_18 = 2131165325;
+			public const int gIcon = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int ic_mtrl_chip_checked_black = 2131165326;
+			public const int googleg_disabled_color_18 = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int ic_mtrl_chip_checked_circle = 2131165327;
+			public const int googleg_standard_color_18 = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int ic_mtrl_chip_close_circle = 2131165328;
+			public const int ic_mtrl_chip_checked_black = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int messenger_bubble_large_blue = 2131165329;
+			public const int ic_mtrl_chip_checked_circle = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int messenger_bubble_large_white = 2131165330;
+			public const int ic_mtrl_chip_close_circle = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int messenger_bubble_small_blue = 2131165331;
+			public const int messenger_bubble_large_blue = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int messenger_bubble_small_white = 2131165332;
+			public const int messenger_bubble_large_white = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int messenger_button_blue_bg_round = 2131165333;
+			public const int messenger_bubble_small_blue = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int messenger_button_blue_bg_selector = 2131165334;
+			public const int messenger_bubble_small_white = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int messenger_button_send_round_shadow = 2131165335;
+			public const int messenger_button_blue_bg_round = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int messenger_button_white_bg_round = 2131165336;
+			public const int messenger_button_blue_bg_selector = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int messenger_button_white_bg_selector = 2131165337;
+			public const int messenger_button_send_round_shadow = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int mtrl_snackbar_background = 2131165338;
+			public const int messenger_button_white_bg_round = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int mtrl_tabs_default_indicator = 2131165339;
+			public const int messenger_button_white_bg_selector = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int navigation_empty_icon = 2131165340;
+			public const int mtrl_snackbar_background = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int notification_action_background = 2131165341;
+			public const int mtrl_tabs_default_indicator = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int notification_bg = 2131165342;
+			public const int navigation_empty_icon = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int notification_bg_low = 2131165343;
+			public const int notification_action_background = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int notification_bg_low_normal = 2131165344;
+			public const int notification_bg = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int notification_bg_low_pressed = 2131165345;
+			public const int notification_bg_low = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int notification_bg_normal = 2131165346;
+			public const int notification_bg_low_normal = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int notification_bg_normal_pressed = 2131165347;
+			public const int notification_bg_low_pressed = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int notification_icon_background = 2131165348;
+			public const int notification_bg_normal = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int notification_template_icon_bg = 2131165349;
+			public const int notification_bg_normal_pressed = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int notification_template_icon_low_bg = 2131165350;
+			public const int notification_icon_background = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int notification_tile_bg = 2131165351;
+			public const int notification_template_icon_bg = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int notify_panel_notification_icon_bg = 2131165352;
+			public const int notification_template_icon_low_bg = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int tooltip_frame_dark = 2131165353;
+			public const int notification_tile_bg = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int tooltip_frame_light = 2131165354;
+			public const int notify_panel_notification_icon_bg = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int welcomelogo = 2131165355;
+			public const int tooltip_frame_dark = 2131165355;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int tooltip_frame_light = 2131165356;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int welcomelogo = 2131165357;
 			
 			static Drawable()
 			{
@@ -10369,37 +10375,49 @@ namespace Livescore.Droid
 			public const int fab_transformation_sheet_behavior = 2131558485;
 			
 			// aapt resource value: 0x7F0D0056
-			public const int hide_bottom_view_on_scroll_behavior = 2131558486;
+			public const int facebook_app_id = 2131558486;
 			
 			// aapt resource value: 0x7F0D0057
-			public const int messenger_send_button_text = 2131558487;
+			public const int facebook_app_name = 2131558487;
 			
 			// aapt resource value: 0x7F0D0058
-			public const int mtrl_chip_close_icon_content_description = 2131558488;
+			public const int fb_login_protocol_scheme = 2131558488;
 			
 			// aapt resource value: 0x7F0D0059
-			public const int overflow_tab_title = 2131558489;
+			public const int google_hashkey = 2131558489;
 			
 			// aapt resource value: 0x7F0D005A
-			public const int password_toggle_content_description = 2131558490;
+			public const int hide_bottom_view_on_scroll_behavior = 2131558490;
 			
 			// aapt resource value: 0x7F0D005B
-			public const int path_password_eye = 2131558491;
+			public const int messenger_send_button_text = 2131558491;
 			
 			// aapt resource value: 0x7F0D005C
-			public const int path_password_eye_mask_strike_through = 2131558492;
+			public const int mtrl_chip_close_icon_content_description = 2131558492;
 			
 			// aapt resource value: 0x7F0D005D
-			public const int path_password_eye_mask_visible = 2131558493;
+			public const int overflow_tab_title = 2131558493;
 			
 			// aapt resource value: 0x7F0D005E
-			public const int path_password_strike_through = 2131558494;
+			public const int password_toggle_content_description = 2131558494;
 			
 			// aapt resource value: 0x7F0D005F
-			public const int search_menu_title = 2131558495;
+			public const int path_password_eye = 2131558495;
 			
 			// aapt resource value: 0x7F0D0060
-			public const int status_bar_notification_info_overflow = 2131558496;
+			public const int path_password_eye_mask_strike_through = 2131558496;
+			
+			// aapt resource value: 0x7F0D0061
+			public const int path_password_eye_mask_visible = 2131558497;
+			
+			// aapt resource value: 0x7F0D0062
+			public const int path_password_strike_through = 2131558498;
+			
+			// aapt resource value: 0x7F0D0063
+			public const int search_menu_title = 2131558499;
+			
+			// aapt resource value: 0x7F0D0064
+			public const int status_bar_notification_info_overflow = 2131558500;
 			
 			static String()
 			{

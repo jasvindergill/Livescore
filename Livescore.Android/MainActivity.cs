@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using Plugin.FacebookClient;
 using Plugin.GoogleClient;
+using Java.Security;
 
 namespace Livescore.Droid
 {
@@ -21,11 +22,37 @@ namespace Livescore.Droid
 
             base.OnCreate(savedInstanceState);
 
+            #region Generate HashKey - Do once, unless needing a newer one
+            //try
+            //{
+            //    PackageInfo info = Android.App.Application.Context.PackageManager.GetPackageInfo(Android.App.Application.Context.PackageName, PackageInfoFlags.Signatures);
+            //    foreach (var signature in info.Signatures)
+            //    {
+            //        MessageDigest md = MessageDigest.GetInstance("SHA");
+            //        md.Update(signature.ToByteArray());
+
+            //        //Facebook
+            //        string st = "Facebook: " + Convert.ToBase64String(md.Digest());
+            //        //Google
+            //        string st2 = "Google: " + BitConverter.ToString(md.Digest()).Replace("-", ":");
+
+            //    }
+            //}
+            //catch (NoSuchAlgorithmException e)
+            //{
+            //    System.Diagnostics.Debug.WriteLine(e);
+            //}
+            //catch (Exception e)
+            //{
+            //    System.Diagnostics.Debug.WriteLine(e);
+            //}
+            #endregion
+
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             //Initialize Socal plugins
-            //FacebookClientManager.Initialize(this);
-            //GoogleClientManager.Initialize(this);
+            FacebookClientManager.Initialize(this);
+            GoogleClientManager.Initialize(this);
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
