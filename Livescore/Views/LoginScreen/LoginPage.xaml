@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Livescore.Views.LoginScreen.LoginPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#393939">
+            <StackLayout Orientation="Vertical" Spacing="20" VerticalOptions="CenterAndExpand">
+                <Button Text="Login with Facebook"
+                            ImageSource="iconFB.png"
+                            HeightRequest="59"
+                            WidthRequest="324"
+                            CornerRadius="25"
+                            TextColor="White"
+                            FontFamily="Roboto"
+                            FontSize="20"
+                            BackgroundColor="#3B5998"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="FillAndExpand"/>
+                <Button Text="Sign in with Google"
+                            HeightRequest="59"
+                            WidthRequest="324"
+                            CornerRadius="25"
+                            TextColor="#7d7c84"
+                            FontFamily="Roboto"
+                            FontSize="20"
+                            BackgroundColor="#FFFFFF"
+                            Command="{Binding OnLoginWithGoogleCommand}"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            Clicked="OnGoogleButtonClicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
