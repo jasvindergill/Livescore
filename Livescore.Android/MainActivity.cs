@@ -9,6 +9,7 @@ using Android.OS;
 using Plugin.FacebookClient;
 using Plugin.GoogleClient;
 using Java.Security;
+using Android.Content;
 
 namespace Livescore.Droid
 {
@@ -60,6 +61,15 @@ namespace Livescore.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent intent)
+        {
+            base.OnActivityResult(requestCode, resultCode, intent);
+            //Facebook
+            FacebookClientManager.OnActivityResult(requestCode, resultCode, intent);
+            //Google
+            GoogleClientManager.OnAuthCompleted(requestCode, resultCode, intent);
         }
     }
 }

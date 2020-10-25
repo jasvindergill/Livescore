@@ -1,4 +1,9 @@
-﻿using Plugin.FacebookClient;
+﻿using Livescore.DataModel.SocialMediaModel.FacebookUserModel;
+using Livescore.DataModel.SocialMediaModel.SocialUserModel;
+using Livescore.Views.Leagues;
+using Livescore.Views.LoginScreen;
+using Newtonsoft.Json;
+using Plugin.FacebookClient;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -26,8 +31,11 @@ namespace Livescore.Models.SocialMediaModels
                 //check if logged in
                 if(_facebookClient.IsLoggedIn)
                 {
+                    //TODO: Give appropriate handler
                     _facebookClient.Logout();
                 }
+
+                
 
                 EventHandler<FBEventArgs<string>> userDataDelegate = null;
 
@@ -41,17 +49,45 @@ namespace Livescore.Models.SocialMediaModels
                     switch(e.Status)
                     {
                         case FacebookActionStatus.Completed:
-                            //TODO
+                            //Handles the FBEvent handler and deserialize it. This is a custom FB Event Handler, hence you can get e.Data
+                            var fbUser = await Task.Run(() => JsonConvert.DeserializeObject<FacebookProfile>(e.Data));
+                            
+                            //A check on null picture
+                            if(fbUser.Picture.Data.Url != null)
+                            {
+                                url = fbUser.Picture.Data.Url;
+                            }
+
+                            //Assign the deserialize values into a generic socialMediaUser model
+                            var socialMediaProfile = new SocialMediaUser
+                            {
+                                Name = fbUser.FirstName,
+                                Email = fbUser.Email,
+                                PictureURL = url
+                            };
+
+                            //Login is completed
+                            //Send the data to the "Select League" page
+                            await App.Current.MainPage.Navigation.PushModalAsync(new SelectLeagues());
                             break;
                         case FacebookActionStatus.Canceled:
-                            //TDOD
+                            //Redirect back to login
+                            await App.Current.MainPage.Navigation.PushModalAsync(new LoginPage());
                             break;
                     }
+                    //_facebookClient.OnUserData -= userDataDelegate;
                 };
+
+                _facebookClient.OnUserData += userDataDelegate;
+
+                string[] fbRequestFields = { "email", "first_name", "last_name", "picture" };
+                string[] fbPermisions = { "email" };
+                await _facebookClient.RequestUserDataAsync(fbRequestFields, fbPermisions);
             }
             catch(Exception e)
             {
-                
+                //TODO: A proper dialog command
+                //https://github.com/aritchie/userdialogs/blob/master/src/Samples/Samples/ViewModels/StandardViewModel.cs
             }
         }
     }
