@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "139244143339",
+    "firebase_url": "https://livescore-9f832.firebaseio.com",
+    "project_id": "livescore-9f832",
+    "storage_bucket": "livescore-9f832.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139244143339:android:108723b27ae0adbea1f4ae",
+        "android_client_info": {
+          "package_name": "com.geca.livescore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139244143339-2r0itouhtlmnbu2140kcjhtj0iodql7k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geca.livescore",
+            "certificate_hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+          }
+        },
+        {
+          "client_id": "139244143339-vtobmksmjglfg78m63bfu4rdaqienta9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKDlAag1hBs1sN-EJiBphANiektKO7EwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139244143339-vtobmksmjglfg78m63bfu4rdaqienta9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
