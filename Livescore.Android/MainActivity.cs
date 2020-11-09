@@ -10,6 +10,10 @@ using Plugin.FacebookClient;
 using Plugin.GoogleClient;
 using Java.Security;
 using Android.Content;
+using Android.Gms.Auth.Api.SignIn;
+using Android.Gms.Common.Apis;
+using Android.Gms.Auth.Api;
+using Firebase;
 
 namespace Livescore.Droid
 {
@@ -54,6 +58,9 @@ namespace Livescore.Droid
             //Initialize Socal plugins
             FacebookClientManager.Initialize(this);
             GoogleClientManager.Initialize(this);
+
+            
+
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

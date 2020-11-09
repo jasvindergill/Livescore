@@ -3,6 +3,7 @@ using Livescore.DataModel.SocialMediaModel.SocialUserModel;
 using Livescore.Views.Leagues;
 using Livescore.Views.LoginScreen;
 using Newtonsoft.Json;
+
 using Plugin.GoogleClient;
 using Plugin.GoogleClient.Shared;
 using System;
@@ -29,6 +30,7 @@ namespace Livescore.Models.SocialMediaModels
             OnLoginWithGoogleCommand = new Command(async () => await LoginGoogleAsync());
         }
 
+       
         private async Task LoginGoogleAsync()
         {
             try
