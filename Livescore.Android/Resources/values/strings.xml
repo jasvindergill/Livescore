@@ -4,4 +4,5 @@
   <string name="facebook_app_id">3454060464691035</string>
   <string name="fb_login_protocol_scheme">fb3454060464691035</string>
   <string name="google_hashkey">DA:39:A3:EE:5E:6B:4B:0D:32:55:BF:EF:95:60:18:90:AF:D8:07:09</string>
+  <string name="livescoreAPI">f4364a4fc7237e8f3c2e3bdadfce4ff763b8dfc6cc39d07dcbb2d398f2d4e2c4</string>
 </resources>

@@ -17,12 +17,11 @@ namespace Livescore.Views.LoginScreen
         public LoginPage()
         {
             InitializeComponent();
-            auth = DependencyService.Get<IFirebaseAuthentication>();
         }
 
         private async void OnGoogleButtonClicked(object sender, EventArgs e)
         {
-            string something = await auth.LoginWithEmailAndPassword();
+            
             this.BindingContext = new GoogleModel();
         }
 
