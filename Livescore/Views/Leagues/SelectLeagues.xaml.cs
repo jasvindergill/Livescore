@@ -14,28 +14,28 @@ namespace Livescore.Views.Leagues
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SelectLeagues : ContentPage
     {
-        LivescoreRepository repository;
+        //LivescoreRepository repository;
 
         public SelectLeagues()
         {
             InitializeComponent();
-            this.BindingContext = this;
-            repository = new LivescoreRepository();
+            this.BindingContext = new LivescoreRepository();
+            //repository = new LivescoreRepository();
         }
 
-        public async Task<League> GetLeagues()
-        {
-            var leagues = await repository.GetLeagues();
+        //public async Task<League> GetLeagues()
+        //{
+        //    var leagues = await repository.GetLeagues();
 
-            if(leagues != null)
-            {
-                return leagues;
-            }
-            else
-            {
-                await DisplayAlert("League Info Exception", "Exception Thrown at GetLeagues", "OK");
-                return null;
-            }
-        }
+        //    if(leagues != null)
+        //    {
+        //        return leagues;
+        //    }
+        //    else
+        //    {
+        //        await DisplayAlert("League Info Exception", "Exception Thrown at GetLeagues", "OK");
+        //        return null;
+        //    }
+        //}
     }
 }

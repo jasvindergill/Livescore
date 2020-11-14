@@ -1,4 +1,5 @@
-﻿using Livescore.Views.LoginScreen;
+﻿using Livescore.Views.Leagues;
+using Livescore.Views.LoginScreen;
 using Livescore.Views.SplashScreen;
 using System;
 using Xamarin.Forms;
@@ -13,7 +14,7 @@ namespace Livescore
             InitializeComponent();
 
             //MainPage = new WelcomeScreen();
-            MainPage = new LoginPage();
+            MainPage = new SelectLeagues();
         }
 
         protected override void OnStart()

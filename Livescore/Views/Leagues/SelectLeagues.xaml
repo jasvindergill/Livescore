@@ -14,15 +14,42 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid BackgroundColor="#000000" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                    <StackLayout Orientation="Horizontal">
-                        <Image></Image>
-                        <Label></Label>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Padding="10">
+                        <!--TODO: <Image></Image>-->
+                        <Label Text="Select Leagues"
+                               FontSize="30"
+                               FontAttributes="Bold"
+                               FontFamily="Roboto"
+                               TextColor="White"/>
                     </StackLayout>
                 </Grid>
-                <Grid Grid.Row="1">
-                    <ContentView>
-                        
-                    </ContentView>
+                <Grid Grid.Row="1" HeightRequest="240" Padding="10">
+                    <CollectionView ItemsSource="{Binding Leagues}"
+                                    ItemsLayout="VerticalList">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="70"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="70"/>
+                                        <ColumnDefinition Width="140"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding country_logo}"
+                                           BackgroundColor="Red"
+                                           Aspect="AspectFill"
+                                           HeightRequest="60"
+                                           WidthRequest="60"/>
+                                    <Label Grid.Column="1"
+                                           Text="{Binding league_name}"
+                                           FontSize="14"
+                                           FontFamily="Roboto"
+                                           TextColor="White"/>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
                 </Grid>
             </Grid> 
         </Grid>

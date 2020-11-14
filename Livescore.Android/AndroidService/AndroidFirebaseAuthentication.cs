@@ -13,33 +13,33 @@ using Livescore.Services;
 
 namespace Livescore.Droid.AndroidService
 {
-    public class AndroidFirebaseAuthentication : IFirebaseAuthentication
+    public class AndroidFirebaseAuthentication //: IFirebaseAuthentication
     {
-        public Task<string> LoginWithEmailAndPassword()
-        {
-            Context context = Android.App.Application.Context;
-            GoogleSignInOptions gso;
-            GoogleApiClient googleApiClient;
-            try
-            {
-                gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
-                    .RequestIdToken("139244143339-vtobmksmjglfg78m63bfu4rdaqienta9.apps.googleusercontent.com")
-                    .RequestEmail().Build();
+        //public Task<string> LoginWithEmailAndPassword()
+        //{
+        //    Context context = Android.App.Application.Context;
+        //    GoogleSignInOptions gso;
+        //    GoogleApiClient googleApiClient;
+        //    try
+        //    {
+        //        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
+        //            .RequestIdToken("139244143339-vtobmksmjglfg78m63bfu4rdaqienta9.apps.googleusercontent.com")
+        //            .RequestEmail().Build();
 
-                googleApiClient = new GoogleApiClient.Builder(context)
-                    .AddApi(Auth.GOOGLE_SIGN_IN_API, gso).Build();
-                googleApiClient.Connect();
+        //        googleApiClient = new GoogleApiClient.Builder(context)
+        //            .AddApi(Auth.GOOGLE_SIGN_IN_API, gso).Build();
+        //        googleApiClient.Connect();
 
-                var intent = Auth.GoogleSignInApi.GetSignInIntent(googleApiClient);
-                context.StartActivity(intent);
+        //        var intent = Auth.GoogleSignInApi.GetSignInIntent(googleApiClient);
+        //        context.StartActivity(intent);
 
-                string ss = string.Empty;
-                return ss;
-            }
-            catch (Exception e)
-            {
+        //        string ss = string.Empty;
+        //        return ss;
+        //    }
+        //    catch (Exception e)
+        //    {
 
-            }
-        }
+        //    }
+        //}
     }
 }

@@ -3,16 +3,28 @@ using Livescore.Models.BaseModel;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Livescore.Models.LivescoreModels.LeagueModel
 {
-    public class LivescoreRepository : Base
+    public class LivescoreRepository : Base, INotifyPropertyChanged
     {
         private string actionUrl = string.Empty;
+        readonly IList<League> source;
+        public ObservableCollection<League> Leagues { get; set; }
 
-        public async Task<League> GetLeagues()
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public LivescoreRepository()
+        {
+            source = new List<League>();
+            GetLeagues();
+        }
+
+        public async void GetLeagues()
         {
             actionUrl = "get_leagues";
 
@@ -22,16 +34,21 @@ namespace Livescore.Models.LivescoreModels.LeagueModel
             {
                 try
                 {
-                    var leagues = JsonConvert.DeserializeObject<League>(result.Response);
-                    return leagues;
+                    List<League> leagues = new List<League>();
+                    leagues = JsonConvert.DeserializeObject<List<League>>(result.Response);
+                    foreach (var league in leagues)
+                    {
+                        source.Add(league);
+                    }
+
+                    Leagues = new ObservableCollection<League>(source);
                 }
                 catch (Exception ex)
                 {
-                    return null;
+                    Console.Write(ex.Message);
                 }
             }
-            else
-                return null;
+            
         }
     }
 }
