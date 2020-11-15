@@ -38,7 +38,12 @@
                                     </Grid.ColumnDefinitions>
                                     <Image Source="{Binding country_logo}"
                                            HeightRequest="60"
-                                           WidthRequest="60"/>
+                                           WidthRequest="60">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Tapped="{Binding OnLeagueGestureTapped}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
                                     <Label Grid.Column="1"
                                            Text="{Binding league_name}"
                                            HorizontalTextAlignment="Center"

@@ -58,9 +58,9 @@ namespace Livescore.Models.LivescoreModels.LeagueModel
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(v));
         }
 
-        void OnPropertyChanged(string propertyName = null)
+        private void OnLeagueGestureTapped(object sender, EventArgs e)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
         }
     }
 }
